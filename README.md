@@ -1,190 +1,94 @@
-# Real-Time Web @cmda-minor-web · 2020/21
+# Drawars
+![]()
 
-## Table of Contents
-- [Synopsis](#synopsis)
-- [Description](#description)
-- [Communication](#communication)
-- [Goals](#goals)
-- [Grading](#grading)
-- [Programme](#programme)
+Drawars is a school project I made where friends can fight against each other using pencils and paper. The project is focused on the principle "real-time", meaning the users can see each other's messages and drawings live. I'll be using a socket for this.
 
-## Synopsis
-- Course: Real-Time Web
-- Minor: [Web Design and Development](https://dlo.mijnhva.nl/d2l/le/content/275640/Home) (*login required)
-- Course Coordinator: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
-- Minor Coordinator(s): Joost Faber ([@joostf](https://github.com/joostf)) Koop Reynders ([@KoopReynders](https://github.com/KoopReynders))
-- Lecturers: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5)) & Lukas van Driel ([@lukasvan3l](https://github.com/lukasvan3l))
-- Student Assistants: Robin ([@]()) & Wouter ([@]())
-- Credit: 3 ECTS credits
-- Academic year: 2020-2021
-- Programme: Communication and Multimedia Design (full time bachelor)
-- Language: Dutch instructions and English resources
+[Click here for the live demo](https://injumichorius.github.io/drawars)
 
-## Description
-During this course you will learn how to build a real-time application. You will learn techniques to setup an open connection between the client and the server. This will enable you to send data in real-time both ways, at the same time.
+## Goal
+The goal of drawars is to provide groups of friends a joyfull experience during quarataine. One user needs to draw a given word, while the others need to guess the word. The person that draws the best and/or guesses the most words wins the drawars and will be Drawars warrior!
 
-## Communication
-- [Github](https://github.com/cmda-minor-web/real-time-web-2021)
-- [Microsoft Teams](https://teams.microsoft.com/l/channel/19%3aeb75a05580374dfbb61a479e14cbcbe6%40thread.tacv2/06%2520-%2520Real-Time%2520Web?groupId=5d001f9a-0a4b-4768-92b1-0f1768328ba3&tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7)
-- [Brightspace](https://dlo.mijnhva.nl/d2l/le/content/275640/Home)
+## Getting started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-If you have questions:
-- [Look at the additional resources]()
-- [Use a search engine like startpage](https://www.startpage.com/)
-- [Ask questions on MS Teams](https://teams.microsoft.com/l/channel/19%3aeb75a05580374dfbb61a479e14cbcbe6%40thread.tacv2/06%2520-%2520Real-Time%2520Web?groupId=5d001f9a-0a4b-4768-92b1-0f1768328ba3&tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7) (please help each other!)
-- [Contact a student-assisstant](#synopsis)
-- [Contact a lecturer](#synopsis)
+### Technical requirements
+To run this project you'll need [Git](https://git-scm.com/downloads), [MongoDB](https://www.mongodb.com) and any [code editor](https://code.visualstudio.com/download)
 
-## Goals
+### Installing
+First you'll need to clone the repository. You can choose a destination by running cd (change directory). You can clone this repository by using clone https://github.com/InjuMichorius/hva-enquete.git.
 
-After finishing this program you can:
-- _deal with real-time complexity;_
-- _handle real-time client-server interaction;_
-- _handle real-time data management;_
-- _handle multi-user support._
+```js
+cd [ENTER YOUR PATH HERE]
+git clone https://github.com/InjuMichorius/hva-enquete.git
+```
+You also need to install the modules. To do this, you can type npm install in your terminal.
 
-## Grading
-Your efforts will be graded using a single point rubric (see below). You will have to pass the criterion (centre column) to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
+```js
+npm install
+```
+### Setting up the database
+This is the structure of the database:
+```JSON
+{
+  "_id":{"$oid":"606275a73d6d8a2440bab79b"},
+  "uuid":"7c99e779-499b-420c-b38e-f83da0f02b66",
+  "studentName":"Inju Michorius",
+  "studentNumber":"500804843",
+  "__v":0
+}
+```
 
-| Deficiency | Criterion | Improvement |
-|:--|:--|:--|
-|  | *Project* Your app is working and published on Heroku. Your project is thoroughly documented in the `README.md` file in your repository. Included are a description of the data-lifecycle, real-time events and external data source used by your app. |  |
-|  | *Complexity* You’ve implemented enough real-time functionality for us to test your comprehension of the subject. A lot of functionality is self-written. You are able to manipulate online examples live. |  |
-|  | *Client-server interaction* By interacting with the app, a user can influence the data model of the server in real time by directly modifying data OR by influencing API requests between server and source. The student has set up the data manipulations. |  |
-|  | *Data management* The server maintains a data model and each client is continuously updated with the correct data. |  |
-|  | *Multi-user support* Multiple clients can connect to the server. Interaction works as expected and is not dependent on the number of clients. You can explain how your app approaches this. |  |
+It will look like this in compass:
+![Screenshot of JSON file in Compass](https://github.com/InjuMichorius/browser-technologies-2021/blob/master/public/img/documentation/databaseStructure)
 
-## Programme
+### Testing
+To test if the application works you can type the command below. If the application works, the terminal should say: Example app listening at: http://localhost:3000
+```js
+npm run dev
+```
+To test if you've correctly connected to the database you can go to the account page by typing http://localhost:3000 in your browser. Once on this page, you can fill in the form and send it. If it shows in the database, you've correctly connected. You can use Compass for easy visual acces to your database.
 
-### Daily schedule
-To keep things simple we use a daily schedule that will be used during normal course days. We make exceptions for checkups and assessments, on these days a different schedule will be given.
+## Feature wishlist / backlog
+* register/login feature
+* form error messages
+* remember user input
+* deploy on Heroku
 
-| Time | Who | Activity |
-|:--|:--|:--|
-| *~09:00* | *(Lukas, Justus, Robin, Wouter)* | *Standup* |
-| 09:30 | Tribe *+(Lukas, Justus, Robin, Wouter)* | Talk with crucial information (make sure you attend!) |
-| 11:00 | Teams in MS Teams: *(ex. R2D2 Team A)* | Work on the (day)assignment |
-|  | Squad R2D2 Team B *+(Justus, Wouter)* | Standup |
-|  | Squad SQUID Team B *+(Lukas, Robin)* | Standup |
-| 11:30 | Squad R2D2 Team C *+(Justus, Wouter)* | Standup |
-|  | Squad SQUID Team C *+(Lukas, Robin)* | Standup |
-| 12:00 | Squad R2D2 Team A *+(Justus, Wouter)* | Standup |
-|  | Squad SQUID Team A *+(Lukas, Robin)* | Standup |
-| 13:00 | Tribe *+(Robin, Wouter)* | Continue work on the (day)assignment |
-| 16:00 | Squad R2D2 Team B *+(Wouter)* | Standup |
-|  | Squad SQUID Team B *+(Robin)* | Standup |
-| 16:15 | Squad R2D2 Team C *+(Wouter)* | Standup |
-|  | Squad SQUID Team C *+(Robin)* | Standup |
-| 16:30 | Squad R2D2 Team A *+(Wouter)* | Standup |
-|  | Squad SQUID Team A *+(Robin)* | Standup |
+## Design patterns and Best Practices
+__Code standards are important__ when working on any project; your code stays *consistent* and is *readable* for everyone. I defined code standards for __HTML__, __CSS__ and __JS__ while working on this project.
 
-### Week 1 - Getting a grip
-Goal: Build and deploy a simple but unique real-time app
+### Javascript code standards
+* Variables & functions are written in __camelCase__
+* Promises are handled with __async functions__ using await
+* I don't use var, only __const__ or __let__
+* I put __spaces around operators__ ( = + - * / ) and after commas (exception for for loops)
+* I use indentation with __TAB__
+* I always end a statement with a __semi-colon;__
+* Functions have their opening bracket on the __same line__ as the name, with 1 space in between
+* I use __ES6 syntax__ where possible
 
-#### Tuesday 6 April
-**Talk subjects:** Hit the ground running... [(slides)](https://docs.google.com/presentation/d/1Z-zOIDvFB0P2qGHV0F74n9T4kprgybJ_8GYU-1MaKfM/edit?usp=sharing) Course objective and explanation of the assignment, examples from last year, explanation of real-time, (live coded) bare bone chat app and deployment on Heroku.\
-**Day assignment:** [(assignment)](./course/week-1.md#assignment-1-make-it-so) Make it so *(as a team)*: Implement (code/style/discuss/deploy) basic chat (or other realtime) functionality on your teampage!
+### CSS code standards
+* I try to avoid __!important__ as much as possible
+* Layout/general styling is always __above__ more specific styling
+* Selectors are not unnecessary __long__ nor __short__
+* I use __CSS3 syntax__ where possible
+* I avoid old display properties like float
+* CSS Selectors must have a __space__ between the name and bracket
 
-#### Friday 9 April
-**Talk subjects:** My first realtime web app! [(slides)](https://docs.google.com/presentation/d/18eftO3epzIXDjdwl3cn5Wq99fkQYCUnExUqq9P72A3k/edit?usp=sharing) Short recap, (local) data management, using (wire) flows for realtime web apps, (live coded) multi-user woordzoeker.\
-**Day assignment:** [(assignment)](./course/week-1.md#assignment-2-make-it-so) Make it so *(individually)*. i) Create (code/style/discuss/deploy) a chat app (or other realtime functionality) based on the examples and ii) add your own unique feature!
+### HTML code standards
+* I only use IDs when the element is present __once__ on a page and it's necessary for styling or Javascript
+* I always write semantic HTML according to __W3C Validator__
+* Divs are only used when __necessary__ for styling purposes
+* Classes allow easy __re-usage__
+* Indentation is always __clear__
 
-### Week 2 - Sockets and data
-Goal: Store, manipulate and share data between server-client   
+## Packages used
+* [Express](https://www.npmjs.com/package/express) - Used to setup the server
+* [MongoDB](https://www.npmjs.com/package/mongodb) - Used to setup the database
+* [Body-parser](https://www.npmjs.com/package/body-parser) - Used to refer to html elements
+* [Dotenv](https://www.npmjs.com/package/dotenv) - Used to protect sensitive information
+* [Ejs](https://www.npmjs.com/package/ejs) - Used for templating
+* [Nodemon](https://www.npmjs.com/package/nodemon) - Used for auto refreshing the server
 
-#### Monday 12 April
-**Talk subjects:** Data driven development?! [(slides)](https://docs.google.com/presentation/d/1WC1DxkQm2eUCTQp7dEfv0cTVMK7zlg3der0P0qP7S5I/edit?usp=sharing) *Gastcollege Thijs Spijker* Feedback about last week, final assignment and conditions (rubric), explanation of data management, (live coded) Long polling vs Websockets. \
-**Day assignment:** [(assignment)](./course/week-2.md#assignment-1-proof-of-concept) (Proof of) Concept *(individually)*. i) Create a (3 > 1) concept based on existing data from an API and ii) map this data using modelling techniques.
-
-#### Tuesday 13 April
-**Talk subjects:** Above all else, show the data. [(slides)](https://docs.google.com/presentation/d/1tW4klrDjt1AfWte311uKkfQYwaHwokzQ-ue3a4VphqA/edit?usp=sharing) Securing real-time web apps, offline support, the publication/subscription model and (case study) Quek!\
-**Day assignment:** [(assignment)](./course/week-2.md#assignment-2-proof-of-concept) Proof of concept *(individually)*: i) Create (code/style/discuss/deploy) part of the core functionality for your concept and ii) show the  corresponding data lifecycle diagram.
-
-#### Friday 16 April - Checkup!
-Instead of our talk we will have a [peer review session](./course/peer-review.md). You will read, comment and fire issues on each others code. Doing this is really good for your programming insight and helps others refining/refactoring their code.
-
-| Time | Who | Activity |
-|:--|:--|:--|
-| 09:30 | Tribe *+(Lukas, Justus, Robin, Wouter)* | Peer review |
-| 10:30 | Squad R2D2 Team B.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team B.2 *+(Wouter)* | Checkup |
-|  | Squad SQUID Team B.1 *+(Lukas)* | Checkup |
-|  | Squad SQUID Team B.2 *+(Robin)* | Checkup |
-| 11:00 | Squad R2D2 Team C.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team C.2 *+(Wouter)* | Checkup |
-|  | Squad SQUID Team C.1 *+(Lukas)* | Checkup |
-|  | Squad SQUID Team C.2 *+(Robin)* | Checkup |
-| 11:30 | Squad R2D2 Team A.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team A.2 *+(Wouter)* | Checkup |
-|  | Squad SQUID Team A.1 *+(Lukas)* | Checkup |
-|  | Squad SQUID Team A.2 *+(Robin)* | Checkup |
-
-### Week 3 - Dealing with multiple users
-Goal: Handle data sharing and multi-user support 
-
-#### Monday 19 April
-**Talk subjects:** Roll your own... [(slides) ](https://docs.google.com/presentation/d/1Cx9qCo8QQXH5Btbtwg0L61so-wn2OxFQZdphIhbumQk/edit?usp=sharing) Data management, the functional programming trinity (map, filter and reduce). OAuth?!
-**Day assignment:** [(assignment)](./course/week-3.md#assignment-1-data-management)
-
-#### Tuesday 20 April
-**Talk subjects:** Not ignoring the UI-Stack! [(slides)](https://docs.google.com/presentation/d/1ACuUJ-B19hgFN2CCTYH8ClN0WD69ok8ZVnkRGbU0FjA/edit?usp=sharing). Usability, feedback, feedforward etc. in real-time web apps, (case study) postNL loader and FAQ.
-**Day assignment:** [(assignment)](./course/week-3.md#assignment-2-user-testing)
-
-#### Friday 23 April
-We will have our final [peer review session](./course/peer-review.md). You will read, comment and fire issues on each others code. Doing this helps others dotting the i’s on their project.
-
-| Time | Who | Activity |
-|:--|:--|:--|
-| 09:30 | Tribe *+(Lukas, Justus, Robin, Wouter)* | Peer review |
-| 10:30 | Squad R2D2 Team B.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team B.2 *+(Wouter)* | Checkup |
-|  | Squad SQUID Team B.1 *+(Lukas)* | Checkup |
-|  | Squad SQUID Team B.2 *+(Robin)* | Checkup |
-| 11:00 | Squad R2D2 Team C.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team C.2 *+(Wouter)* | Checkup |
-|  | Squad SQUID Team C.1 *+(Lukas)* | Checkup |
-|  | Squad SQUID Team C.2 *+(Robin)* | Checkup |
-| 11:30 | Squad R2D2 Team A.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team A.2 *+(Wouter)* | Checkup |
-|  | Squad SQUID Team A.1 *+(Lukas)* | Checkup |
-|  | Squad SQUID Team A.2 *+(Robin)* | Checkup |
-
-### Week 4
-Goal: Assess and wrap-up the course!
-
-#### Wednesday 28 April
-**09.30** [*Lukas, Justus*] Assessments (scheduled) SQUID A.1/B.1/C.1 and R2D2 A.1/B.1/C.1
-
-#### Thursday 29 April
-**09.30** [*Lukas, Justus*] Assessments (scheduled) SQUID A.2/B.2/C.2 and R2D2 A.2/B.2/C.2
-
-#### Friday 30 April 
-**15.00** [*Everyone*] Wrap-up for the course. (drinks?!)
-
-
-
-<!-- Here are some hints for your project! -->
-
-<!-- Start out with a title and a description -->
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- This would be a good place for your data life cycle ♻️-->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜  -->
+## License
+This project is licensed under the MIT license. See the [LISENCE.md](https://github.com/InjuMichorius/Filmaholic/blob/master/LICENSE) file for details
