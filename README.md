@@ -31,11 +31,11 @@ npm install
 ```
 ### Setting up the database
 This is the structure of the database:
-```JSON
+```
 {
-  "_id:" ObjectId("6066e6fd9133894abc78bdf9")
-  "User": "Inju Michorius"
-  "Score": "1900"
+  _id: ObjectId("6066e6fd9133894abc78bdf9")
+  User: "Inju Michorius"
+  Score: 1900
 }
 ```
 
