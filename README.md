@@ -6,7 +6,7 @@ Drawars is a school project I made where friends can fight against each other us
 [Click here for the live demo](https://injumichorius.github.io/drawars)
 
 ## Goal
-The goal of drawars is to provide groups of friends a joyfull experience during quarataine. One user needs to draw a given word, while the others need to guess the word. The person that draws the best and/or guesses the most words wins the drawars and will be Drawars warrior!
+The goal of drawars is to provide groups of friends a joyfull experience during quarataine. One user needs to draw a given word, while the others need to guess the word. The person that draws the best and/or guesses the most words wins the drawars and will be the ultimate Drawars warrior!
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
