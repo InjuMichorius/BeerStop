@@ -8,6 +8,9 @@ Drawars is a school project I made where friends can fight against each other us
 ## Goal
 The goal of drawars is to provide groups of friends a joyfull experience during quarataine. One user needs to draw a given word, while the others need to guess the word. The person that draws the best and/or guesses the most words wins the drawars and will be the ultimate Drawars warrior!
 
+## Dataflow
+![]()
+
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -86,7 +89,7 @@ __Code standards are important__ when working on any project; your code stays *c
 * [Dotenv](https://www.npmjs.com/package/dotenv) - Used to protect sensitive information
 * [Ejs](https://www.npmjs.com/package/ejs) - Used for templating
 * [Nodemon](https://www.npmjs.com/package/nodemon) - Used for auto refreshing the server
-* [Socket.io](https://www.https://socket.io/) - Used for real-time
+* [Socket.io](https://www.https://socket.io/) - Used to allow users a real-time experience
 
 ## License
 This project is licensed under the MIT license. See the [LISENCE.md](https://github.com/InjuMichorius/Filmaholic/blob/master/LICENSE) file for details
