@@ -15,11 +15,11 @@ These instructions will get you a copy of the project up and running on your loc
 To run this project you'll need [Git](https://git-scm.com/downloads), [MongoDB](https://www.mongodb.com) and any [code editor](https://code.visualstudio.com/download)
 
 ### Installing
-First you'll need to clone the repository. You can choose a destination by running cd (change directory). You can clone this repository by using clone https://github.com/InjuMichorius/hva-enquete.git.
+First you'll need to clone the repository. You can choose a destination by running cd (change directory). You can clone this repository by using clone https://github.com/InjuMichorius/Drawars.git.
 
 ```js
 cd [ENTER YOUR PATH HERE]
-git clone https://github.com/InjuMichorius/hva-enquete.git
+git clone https://github.com/InjuMichorius/Drawars.git
 ```
 You also need to install the modules. To do this, you can type npm install in your terminal.
 
@@ -30,16 +30,14 @@ npm install
 This is the structure of the database:
 ```JSON
 {
-  "_id":{"$oid":"606275a73d6d8a2440bab79b"},
-  "uuid":"7c99e779-499b-420c-b38e-f83da0f02b66",
-  "studentName":"Inju Michorius",
-  "studentNumber":"500804843",
-  "__v":0
+  "_id:" ObjectId("6066e6fd9133894abc78bdf9")
+  "User": "Inju Michorius"
+  "Score": "1900"
 }
 ```
 
 It will look like this in compass:
-![Screenshot of JSON file in Compass](https://github.com/InjuMichorius/browser-technologies-2021/blob/master/public/img/documentation/databaseStructure)
+![]()
 
 ### Testing
 To test if the application works you can type the command below. If the application works, the terminal should say: Example app listening at: http://localhost:3000
@@ -49,7 +47,9 @@ npm run dev
 To test if you've correctly connected to the database you can go to the account page by typing http://localhost:3000 in your browser. Once on this page, you can fill in the form and send it. If it shows in the database, you've correctly connected. You can use Compass for easy visual acces to your database.
 
 ## Feature wishlist / backlog
-* Coming soon
+- [X] Chat function
+- [ ] Database
+
 
 ## Design patterns and Best Practices
 __Code standards are important__ when working on any project; your code stays *consistent* and is *readable* for everyone. I defined code standards for __HTML__, __CSS__ and __JS__ while working on this project.
