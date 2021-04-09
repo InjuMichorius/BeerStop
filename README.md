@@ -49,7 +49,7 @@ npm run dev
 To test if you've correctly connected to the database you can go to the account page by typing http://localhost:3000 in your browser. Once on this page, you can fill in the form and send it. If it shows in the database, you've correctly connected. You can use Compass for easy visual acces to your database.
 
 ## Feature wishlist / backlog
-* Comming soon
+* Coming soon
 
 ## Design patterns and Best Practices
 __Code standards are important__ when working on any project; your code stays *consistent* and is *readable* for everyone. I defined code standards for __HTML__, __CSS__ and __JS__ while working on this project.
