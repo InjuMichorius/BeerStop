@@ -1,5 +1,5 @@
 # Drawars
-<a href="https://fontmeme.com/star-wars-font/"><img src="https://fontmeme.com/permalink/210409/a67e958b9143485235c886b90cd58dff.png" alt="star-wars-font" border="0"></a>
+<a href="https://fontmeme.com/star-wars-font/"><img src="https://fontmeme.com/permalink/210409/a67e958b9143485235c886b90cd58dff.png" alt="star-wars-font" border="0" width=100%></a>
 
 Drawars is a school project I made where friends can fight against each other using (digital) pencils and paper. The project is focused on the principle "real-time", meaning the users can see each other's messages and drawings live. I'll be using socket.io for this.
 
