@@ -71,11 +71,11 @@ __Code standards are important__ when working on any project; your code stays *c
 
 ### Javascript code standards
 * Variables & functions are written in __camelCase__
-* Promises are handled with __async functions__ using await
+* Promises are handled with __async functions__ using __await__
 * I don't use var, only __const__ or __let__
 * I put __spaces around operators__ ( = + - * / ) and after commas (exception for for loops)
 * I use indentation with __TAB__
-* I always end a statement with a __semi-colon;__
+* I never end a statement with a __semi-colon;__
 * Functions have their opening bracket on the __same line__ as the name, with 1 space in between
 * I use __ES6 syntax__ where possible
 
@@ -84,8 +84,10 @@ __Code standards are important__ when working on any project; your code stays *c
 * Layout/general styling is always __above__ more specific styling
 * Selectors are not unnecessary __long__ nor __short__
 * I use __CSS3 syntax__ where possible
-* I avoid old display properties like float
+* I avoid old display properties like __float__
 * CSS Selectors must have a __space__ between the name and bracket
+* I use __global CSS variables__ for more dynamic styling
+* 
 
 ### HTML code standards
 * I only use IDs when the element is present __once__ on a page and it's necessary for styling or Javascript
@@ -93,6 +95,7 @@ __Code standards are important__ when working on any project; your code stays *c
 * Divs are only used when __necessary__ for styling purposes
 * Classes allow easy __re-usage__
 * Indentation is always __clear__
+* Classes are named with a __Hyphen__ when a space is needed
 
 ## Packages used
 * [Express](https://www.npmjs.com/package/express) - Used to setup the server
