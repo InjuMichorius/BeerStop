@@ -11,7 +11,9 @@ io.on('connection', (socket) => {
   console.log('a user connected')
 
   socket.on('message', (message) => {
-    console.log('message: ' + message)
+    if (message === 'snorkel') {
+        console.log('Het woord is goed geraden!')
+    }
     io.emit('message', message)
   })
 

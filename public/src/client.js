@@ -16,3 +16,5 @@ socket.on('message', function(message) {
   messages.appendChild(element)
   messages.scrollTop = messages.scrollHeight
 })
+
+console.log(message)
