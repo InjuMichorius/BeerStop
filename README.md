@@ -51,7 +51,19 @@ To test if you've correctly connected to the database you can go to the account 
 
 ## Feature wishlist / backlog
 - [X] Chat function
-- [ ] Database
+- [ ] Connect a database
+- [ ] Save users
+- [ ] Work on point system
+- [ ] Users can see each other's drawings
+- [ ] User can see someone else draw live
+- [ ] User can choose different colors
+- [ ] User can erase his mistakes
+- [ ] User can choose between 5 words
+- [ ] User can guess a word and gain points
+- [ ] Users can create own rooms
+- [ ] Users can create own avatar
+- [ ] Different ranks depending on points 
+- [ ] Different roles (Admin role for room creator)
 
 
 ## Design patterns and Best Practices
