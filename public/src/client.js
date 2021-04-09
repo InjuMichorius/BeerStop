@@ -17,4 +17,3 @@ socket.on('message', function(message) {
   messages.scrollTop = messages.scrollHeight
 })
 
-console.log(message)

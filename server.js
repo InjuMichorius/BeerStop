@@ -8,17 +8,21 @@ const port = process.env.PORT || 3000
 app.use(express.static(path.resolve('public')))
 
 io.on('connection', (socket) => {
-  console.log('a user connected')
+  console.log('New user connected')
 
   socket.on('message', (message) => {
     if (message === 'snorkel') {
-        console.log('Het woord is goed geraden!')
+        io.emit('message', "User guessed the word correctly!")
+    } else {
+        io.emit('message', message)
     }
-    io.emit('message', message)
   })
+
+  socket.broadcast.emit('message', 'A user has joined the chat')
 
   socket.on('disconnect', () => {
     console.log('user disconnected')
+    io.emit('message', "A user has left the chat")
   })
 })
 
