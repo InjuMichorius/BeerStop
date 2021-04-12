@@ -14,6 +14,10 @@ app.use(bodyParser.urlencoded({
 //Set default path to public
 app.use(express.static(path.resolve('public')))
 
+//Templating engine
+app.set('views', 'view')
+app.set('view engine', 'ejs')
+
 //Fires a function on user connection with the socket
 io.on('connection', (socket) => {
   

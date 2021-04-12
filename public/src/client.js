@@ -16,3 +16,16 @@ socket.on('message', function (message) {
     messages.appendChild(element)
     messages.scrollTop = messages.scrollHeight
 })
+
+function randomNumber(len) {
+    var randomNumber;
+    var n = '';
+
+    for(let count = 0; count < len; count++) {
+        randomNumber = Math.floor(Math.random() * 10);
+        n += randomNumber.toString();
+    }
+    return n;
+}
+
+roomId.value = randomNumber(9);
