@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barebone chat</title>
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeerStop | Create room</title>
 </head>
+
 <body>
-  
-  <main>
-    <section>
-      <h2>Le Chat <span>waar je niet weet met wie je chat...</span></h2>
-      <ul></ul>
-      <form>
-        <input type="text" autocomplete="off">
-        <button>Send</button>
-      </form>
-    </section>
-  </main>
-  
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="./src/client.js"></script>
+    <main>
+        <form action="/beerStop.html" id="account">
+            <label for="username"></label>
+            <input type="text" id="username" name="username" placeholder="Andre the Giant">
+
+            <label for="room-id"></label>
+            <input type="text" id="room-id" name="room-id" placeholder="0000" value="" min-length="1" max-length="4">
+
+            <input type="submit" value="Start playing!">
+        </form>
+    </main>
+    <script src="./src/client.js"></script>
 </body>
+
 </html>

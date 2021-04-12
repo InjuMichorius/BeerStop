@@ -1,7 +1,7 @@
 {
-  "name": "drawars",
+  "name": "beerstop",
   "version": "1.0.0",
-  "description": " friends can fight against each other using pencils and paper",
+  "description": "A Dutch drinking game, based on statistics and luck",
   "main": "server.js",
   "directories": {
     "doc": "docs"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InjuMichorius/Drawars.git"
+    "url": "git+https://github.com/InjuMichorius/BeerStop.git"
   },
   "keywords": [
     "real-time",
@@ -23,9 +23,9 @@
   "author": "Inju Michorius (inju@hotmail.nl)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/InjuMichorius/Drawars/issues"
+    "url": "https://github.com/InjuMichorius/BeerStop/issues"
   },
-  "homepage": "https://github.com/InjuMichorius/Drawars#readme",
+  "homepage": "https://github.com/InjuMichorius/BeerStop#readme",
   "dependencies": {
     "express": "^4.17.1",
     "http": "0.0.1-security",
