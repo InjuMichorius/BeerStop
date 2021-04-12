@@ -4,3 +4,11 @@
     --primary-color: "#ED836D";
     --secondary-color: "#FBE76A";
 }
+
+p {
+    font-size: 90rem;
+}
+
+.blue {
+    color: blue;
+}

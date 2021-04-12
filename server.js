@@ -18,6 +18,18 @@ app.use(express.static(path.resolve('public')))
 app.set('views', 'view')
 app.set('view engine', 'ejs')
 
+//Routes
+app.get('/', (req, res) => {
+  res.render('index')
+});
+
+app.get('/beerStop', (req, res) => {
+  res.render('beerStop', {
+    username: req.query.username,
+    roomId: req.query.roomId
+  })
+});
+
 //Fires a function on user connection with the socket
 io.on('connection', (socket) => {
   
