@@ -1,3 +1,5 @@
+const socket = io()
+
 const body = document.querySelector('body')
 document.getElementById('start-game').addEventListener('click', startGame)
 
@@ -31,5 +33,9 @@ function startGame() {
     body.appendChild(optionOne)
     body.appendChild(optionTwo)
 }
+
+socket.on('message', message => {
+    console.log(message)
+})
 
 console.log('Hello world!')

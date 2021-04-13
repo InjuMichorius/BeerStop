@@ -40,13 +40,14 @@ app.get('/game', (req, res) => {
 //Fires a function on user connection with the socket
 io.on('connection', (socket) => {
   
-  console.log('New user connected')
-  socket.emit('Message', 'Welcome to the hackerzone B)')
-  socket.emit('Message', 'A user joined the console log')
+  //Welcome current user
+  socket.emit('message', 'Welcome to the hackerzone B)')
+
+  //Shows when a user connects
+  socket.broadcast.emit('message', 'A user joined the console log')
 
   socket.on('disconnect', () => {
-    console.log('user disconnected')
-    io.emit('message', "A user has left the chat")
+    io.emit('message', 'A user has left the chat')
   })
 })
 
