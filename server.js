@@ -30,14 +30,19 @@ app.get('/beerStop', (req, res) => {
   })
 });
 
+app.get('/game', (req, res) => {
+  res.render('game', {
+    username: req.query.username,
+    roomId: req.query.roomId
+  })
+});
+
 //Fires a function on user connection with the socket
 io.on('connection', (socket) => {
   
   console.log('New user connected')
-
-  socket.on('message', (message) => {
-    io.emit('message', message)
-  })
+  socket.emit('Message', 'Welcome to the hackerzone B)')
+  socket.emit('Message', 'A user joined the console log')
 
   socket.on('disconnect', () => {
     console.log('user disconnected')

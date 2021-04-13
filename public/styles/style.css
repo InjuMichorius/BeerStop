@@ -5,10 +5,7 @@
     --secondary-color: "#FBE76A";
 }
 
-p {
-    font-size: 90rem;
-}
-
-.blue {
+.question {
+    content: "Red or black?";
     color: blue;
 }
