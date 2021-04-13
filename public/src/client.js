@@ -4,6 +4,7 @@ const socket = io()
 //Creating variables
 const roomName = document.getElementById('room-id')
 const userList = document.getElementById('users')
+const playerCount = document.getElementById('player-count')
 
 //Get username and room id out of the URL
 const { username, roomId} = Qs.parse(location.search, {
@@ -48,11 +49,11 @@ function outputRoomName(roomId) {
 
 //Add users to DOM
 function outputUsers(users) {
+    console.log(users.length)
+    playerCount.innerHTML = `${users.length}`
     userList.innerHTML = `
     ${users.map(user => `<li>${user.username}</li>`).join('')}
     `
 }
-
-console.log('Hello world!')
 
 // insertAdjacentHTML("afterend", `<li><strong>${teamMember.username}</strong><ul class="stats"><li>Wins: ${teamMember.wins}</li><li>KD: ${teamMember.kd}</li></ul></li>}")<li><strong>${teamMember.username}</strong><ul class="stats"><li>Wins: ${teamMember.wins}</li><li>KD: ${teamMember.kd}</li></ul></li>}`
