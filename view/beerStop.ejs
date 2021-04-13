@@ -9,16 +9,11 @@
 <body>
     <header>
         <h1>BeerStop</h1>
-        <h2>RoomId: <%- room %></h2>
+        <h2 id="room-id"></h2>
     </header>
     <main>
-        <span>Players (1/1)</span>
-        <section>
-            <article>
-                <img src="./img/user.png" alt="image of the user" width="100" height="100">
-                <h3><%- name %></h3>
-            </article>
-        </section>
+        <p>Players (<span id="player-count"></span>/1)</p>
+        <ol id="users"></ol>
         <button id="start-game">Start game</button>
     </main>
 

@@ -6,7 +6,7 @@ const path = require('path')
 const io = require('socket.io')(http)
 const port = process.env.PORT || 3000
 
-const { userJoin, getCurrentUser } = require("./utils/users")
+const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require("./utils/users")
 
 //Something with bodyparser
 app.use(bodyParser.urlencoded({
@@ -26,10 +26,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/beerStop', (req, res) => {
-  res.render('beerStop', {
-    name: req.query.username,
-    room: req.query.roomId
-  })
+  res.render('beerStop')
 });
 
 app.get('/game', (req, res) => {
@@ -54,10 +51,28 @@ io.on('connection', (socket) => {
     //Shows when a user connects
     socket.broadcast.to(user.roomId).emit('message', `${user.username} has joined the chat`)
 
+    //Send users and show room information
+    io.to(user.roomId).emit('roomUsers', {
+      roomId: user.roomId,
+      users: getRoomUsers(user.roomId)
+    })
+
   })
 
   socket.on('disconnect', () => {
-    io.emit('message', `${user.username} has left the chat`)
+    const user = userLeave(socket.id)
+
+    //If user exist
+    if (user) {
+      io.to(user.roomId).emit('message', `${user.username} has left the chat`)
+
+      //Send users and show room information
+      io.to(user.roomId).emit('roomUsers', {
+        roomId: user.roomId,
+        users: getRoomUsers(user.roomId)
+      })
+    }
+
   })
 })
 

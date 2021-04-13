@@ -1,6 +1,10 @@
 //Initializing socket
 const socket = io()
 
+//Creating variables
+const roomName = document.getElementById('room-id')
+const userList = document.getElementById('users')
+
 //Get username and room id out of the URL
 const { username, roomId} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
@@ -8,6 +12,12 @@ const { username, roomId} = Qs.parse(location.search, {
 
 //Join specific room
 socket.emit('joinRoom', { username, roomId })
+
+//Get room and users
+socket.on('roomUsers', ({ roomId, users }) => {
+    outputRoomName(roomId)
+    outputUsers(users)
+})
 
 const body = document.querySelector('body')
 document.getElementById('start-game').addEventListener('click', startGame)
@@ -30,6 +40,18 @@ function startGame() {
 socket.on('message', message => {
     console.log(message)
 })
+
+//Add room name to DOM
+function outputRoomName(roomId) {
+    roomName.innerText = roomId
+}
+
+//Add users to DOM
+function outputUsers(users) {
+    userList.innerHTML = `
+    ${users.map(user => `<li>${user.username}</li>`).join('')}
+    `
+}
 
 console.log('Hello world!')
 
