@@ -2,10 +2,12 @@
 ![](https://github.com/InjuMichorius/BeerStop/blob/main/public/img/documentation/drinking%20game%20%E2%80%93%204.jpg)
 BeerStop is a school project I made where friends can play a (Dutch) drinking game with cards. The project is focused on the principle "real-time", meaning the users can see each other's actions live. I'll be using socket.io for this.
 
-[Click here for the live demo](https://injumichorius.github.io/drawars)
+[Click here for the live demo](beerstop.herokuapp.com/)
 
 ## Goal
-The goal of drawars is to provide groups of friends a joyfull experience during quarataine. One user needs to draw a given word, while the others need to guess the word. The person that draws the best and/or guesses the most words wins the drawars and will be the ultimate Drawars warrior!
+The goal of BeerStop is to provide groups of friends a joyfull experience during quarataine. It's a Dutch drinking game called "bussen", where people play a few rounds of lucky guesses to obtain 4 cards. When every player has 4 cards, the real game begins and players can lay their cards on the christmas tree!
+
+For a full explanation on the game, visit the rules here (Link coming soon)
 
 ## Dataflow
 Explanation and visual representation of data flow, coming soon.
@@ -20,11 +22,11 @@ These instructions will get you a copy of the project up and running on your loc
 To run this project you'll need [Git](https://git-scm.com/downloads), [MongoDB](https://www.mongodb.com) and any [code editor](https://code.visualstudio.com/download)
 
 ### Installing
-First you'll need to clone the repository. You can choose a destination by running cd (change directory). You can clone this repository by using clone https://github.com/InjuMichorius/Drawars.git.
+First you'll need to clone the repository. You can choose a destination by running cd (change directory). You can clone this repository by using clone https://github.com/InjuMichorius/BeerStop.git.
 
 ```js
 cd [ENTER YOUR PATH HERE]
-git clone https://github.com/InjuMichorius/Drawars.git
+git clone https://github.com/InjuMichorius/BeerStop.git
 ```
 You also need to install the modules. To do this, you can type npm install in your terminal.
 
@@ -52,20 +54,7 @@ npm run dev
 To test if you've correctly connected to the database you can go to the account page by typing http://localhost:3000 in your browser. Once on this page, you can fill in the form and send it. If it shows in the database, you've correctly connected. You can use Compass for easy visual acces to your database.
 
 ## Feature wishlist / backlog
-- [X] Chat function
-- [ ] Connect a database
-- [ ] Save users
-- [ ] Work on point system
-- [ ] Users can see each other's drawings
-- [ ] User can see someone else draw live
-- [ ] User can choose different colors
-- [ ] User can erase his mistakes
-- [ ] User can choose between 5 words
-- [ ] User can guess a word and gain points
-- [ ] Users can create own rooms
-- [ ] Users can create own avatar
-- [ ] Different ranks depending on points 
-- [ ] Different roles (Admin role for room creator)
+- [X] Drink!
 
 
 ## Design patterns and Best Practices
