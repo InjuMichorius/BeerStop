@@ -2,7 +2,7 @@
 ![](https://github.com/InjuMichorius/BeerStop/blob/main/public/img/documentation/drinking%20game%20%E2%80%93%204.jpg)
 BeerStop is a school project I made where friends can play a (Dutch) drinking game with cards. The project is focused on the principle "real-time", meaning the users can see each other's actions live. I'll be using socket.io for this.
 
-[Click here for the live demo](beerstop.herokuapp.com/)
+[Click here for the live demo](https://beerstop.herokuapp.com/)
 
 ## Goal
 The goal of BeerStop is to provide groups of friends a joyfull experience during quarataine. It's a Dutch drinking game called "bussen", where people play a few rounds of lucky guesses to obtain 4 cards. When every player has 4 cards, the real game begins and players can lay their cards on the christmas tree!
