@@ -7,7 +7,7 @@ const userList = document.getElementById('users')
 const playerCount = document.getElementById('player-count')
 
 //Get username and room id out of the URL
-const { username, roomId} = Qs.parse(location.search, {
+const { username, roomId } = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 })
 
@@ -34,7 +34,26 @@ function startGame() {
     body.innerHTML = ""
 
 
-    body.insertAdjacentHTML("afterend", `<p>Hello</p>`)
+    body.insertAdjacentHTML("afterend", `
+    <body>
+        <header>
+            <section>
+                <article>
+                    <h2>${username}</h2>
+                    <img src="./img/user.png" alt="" width="200">
+                </article>
+            </section>
+        </header>
+        <main>
+            <h1>Red or black?</h1>
+            <img src="./img/temp.png" alt="" width="200">
+            <button>Red</button><button>Black</button>
+            <div class="stats">
+                <h3>Gulps</h3>
+                <p>Playername: <span>18</span></p>
+            </div>
+        </main>
+    </body>`)
     console.log(username)
 }
 
