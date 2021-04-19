@@ -1,6 +1,5 @@
 const fetch = require('node-fetch')
 const shuffledCards = require('./public/src/api.js')
-const deckId = shuffledCards()
 
 //Get deck id from fetched deck
 async function deck(req, res) {
@@ -9,14 +8,12 @@ async function deck(req, res) {
   console.log('Deck id: ' + deckId)
   return deckId
 }
-deck()
 
 // Function that draws one card
-async function drawCard(req, res, deckId) {
+async function drawCard(req, res) {
   const drawnCard = await fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
-  console.log(deckId)
+  console.log(await drawnCard.json())
 }
-drawCard()
 
 const express = require('express')
 const bodyParser = require('body-parser')
