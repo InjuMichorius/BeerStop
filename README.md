@@ -5,15 +5,48 @@ BeerStop is a school project I made where friends can play a (Dutch) drinking ga
 [Click here for the live demo](https://beerstop.herokuapp.com/)
 
 ## Goal
-The goal of BeerStop is to provide groups of friends a joyfull experience during quarataine. It's a Dutch drinking game called "bussen", where people play a few rounds of lucky guesses to obtain 4 cards. When every player has 4 cards, the real game begins and players can lay their cards on the christmas tree!
+The goal of BeerStop is to provide groups of friends a joyfull experience during quarataine. It's a Dutch drinking game called "bussen", where people play a few rounds of lucky guesses to obtain 4 cards. When every player has 4 cards, the real game begins and players can lay their cards on the so called "christmas tree"!
 
 For a full explanation on the game, visit the rules here [work in progress](https://github.com/InjuMichorius/BeerStop/wiki/Wireflow)
 
 ## Dataflow
 Explanation and visual representation of data flow, coming soon.
 
-## SWAPI API
-Explanation and visual representation of the used api, coming soon.
+## Deck of Cards API
+For this application I used The Deck of Cards API. The API is very well documented on https://deckofcardsapi.com/
+
+The link used to fetch the api is https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1, deck_count means how many card decks are being shuffled. The default is one.
+
+```json
+{
+    "success": true,
+    "deck_id": "d5x0uw65g416",
+    "remaining": "42",
+    "piles": {
+        "player1": {
+            "remaining": "3"
+        },
+        "player2": {
+            "cards": [
+                {
+                    "image": "https://deckofcardsapi.com/static/img/KH.png",
+                    "value": "KING",
+                    "suit": "HEARTS",
+                    "code": "KH"
+                },
+                {
+                    "image": "https://deckofcardsapi.com/static/img/8C.png",
+                    "value": "8",
+                    "suit": "CLUBS",
+                    "code": "8C"
+                }
+            ],
+            "remaining": "2"
+        }
+    },
+}
+```
+
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -33,18 +66,6 @@ You also need to install the modules. To do this, you can type npm install in yo
 ```js
 npm install
 ```
-### Setting up the database
-This is the structure of the database:
-```
-{
-  _id: ObjectId("6066e6fd9133894abc78bdf9")
-  User: "Inju Michorius"
-  Score: 1900
-}
-```
-
-It will look like this in compass:
-![]()
 
 ### Testing
 To test if the application works you can type the command below. If the application works, the terminal should say: Example app listening at: http://localhost:3000
@@ -54,8 +75,31 @@ npm run dev
 To test if you've correctly connected to the database you can go to the account page by typing http://localhost:3000 in your browser. Once on this page, you can fill in the form and send it. If it shows in the database, you've correctly connected. You can use Compass for easy visual acces to your database.
 
 ## Feature wishlist / backlog
-- [X] Drink!
+Below is a list of features I'd love to add to this application. The features are split up using the **M**o**SC**o**W** method.
 
+**M** - Must haves
+_These features are requirements for the end product_
+- [x] Custom username
+- [x] Different availabe rooms
+- [ ] API connection
+- [ ] Possibility to see a card and guess the right answer
+
+**S** - Should haves
+_These features are wanted, but not necessary for a usable product_
+- [ ] Styling that matches the Adobe XD document
+- [ ] making users unable to join existing and already playing rooms
+- [ ] Set up amount of cards and amount of gulps
+
+**C** - Could haves
+_These features can be added if there is enough time to do so_
+- [ ] Customize playable character
+- [ ] Cool animations to help user experience
+- [ ] Sounds/music
+
+**W** - Would haves
+_These features can be added in the future_
+- [ ] Webcam and microphone acces
+- [ ] Account's
 
 ## Design patterns and Best Practices
 __Code standards are important__ when working on any project; your code stays *consistent* and is *readable* for everyone. I defined code standards for __HTML__, __CSS__ and __JS__ while working on this project.
