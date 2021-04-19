@@ -57,7 +57,7 @@ npm run dev
 To test if you've correctly connected to the database you can go to the account page by typing http://localhost:3000 in your browser. Once on this page, you can fill in the form and send it. If it shows in the database, you've correctly connected. You can use Compass for easy visual acces to your database.
 
 ## Feature wishlist / backlog
-- [X] Drink!
+Below is a list of features I'd love to add to this application. The features are split up using the __M__o__SC__o__W__ method.
 
 
 ## Design patterns and Best Practices
