@@ -1,3 +1,6 @@
+const shuffledCards =  require('./public/src/api.js')
+shuffledCards()
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
@@ -27,13 +30,6 @@ app.get('/', (req, res) => {
 
 app.get('/beerStop', (req, res) => {
   res.render('beerStop')
-});
-
-app.get('/game', (req, res) => {
-  res.render('game', {
-    username: req.query.username,
-    roomId: req.query.roomId
-  })
 });
 
 //Fires a function on user connection with the socket

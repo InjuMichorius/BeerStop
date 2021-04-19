@@ -45,13 +45,9 @@ function startGame() {
             </section>
         </header>
         <main>
-            <h1>Red or black?</h1>
+            <h1>${currentQuestion}</h1>
             <img src="./img/temp.png" alt="" width="200">
-            <button>Red</button><button>Black</button>
-            <div class="stats">
-                <h3>Gulps</h3>
-                <p>Playername: <span>18</span></p>
-            </div>
+            <button>${currentOptionOne}</button><button>${currentOptionTwo}</button>
         </main>
     </body>`)
     console.log(username)
