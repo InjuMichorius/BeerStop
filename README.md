@@ -13,7 +13,7 @@ For a full explanation on the game, visit the rules here [work in progress](http
 Explanation and visual representation of data flow, coming soon.
 
 ## Deck of Cards API
-The API is well documented on https://deckofcardsapi.com/
+For this application I used The Deck of Cards API. The API is very well documented on https://deckofcardsapi.com/
 
 The link used to fetch the api is https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1, deck_count means how many card decks are being shuffled. The default is one.
 
@@ -36,18 +36,6 @@ You also need to install the modules. To do this, you can type npm install in yo
 ```js
 npm install
 ```
-### Setting up the database
-This is the structure of the database:
-```
-{
-  _id: ObjectId("6066e6fd9133894abc78bdf9")
-  User: "Inju Michorius"
-  Score: 1900
-}
-```
-
-It will look like this in compass:
-![]()
 
 ### Testing
 To test if the application works you can type the command below. If the application works, the terminal should say: Example app listening at: http://localhost:3000
@@ -57,8 +45,31 @@ npm run dev
 To test if you've correctly connected to the database you can go to the account page by typing http://localhost:3000 in your browser. Once on this page, you can fill in the form and send it. If it shows in the database, you've correctly connected. You can use Compass for easy visual acces to your database.
 
 ## Feature wishlist / backlog
-Below is a list of features I'd love to add to this application. The features are split up using the __M__ o __SC__ o __W__ method.
+Below is a list of features I'd love to add to this application. The features are split up using the **M**o**SC**o**W** method.
 
+**M** - Must haves
+_These features are requirements for the end product_
+- [x] Custom username
+- [x] Different availabe rooms
+- [ ] API connection
+- [ ] Possibility to see a card and guess the right answer
+
+**S** - Should haves
+_These features are wanted, but not necessary for a usable product_
+- [ ] Styling that matches the Adobe XD document
+- [ ] making users unable to join existing and already playing rooms
+- [ ] Set up amount of cards and amount of gulps
+
+**C** - Could haves
+_These features can be added if there is enough time to do so_
+- [ ] Customize playable character
+- [ ] Cool animations to help user experience
+- [ ] Sounds/music
+
+**W** - Would haves
+_These features can be added in the future_
+- [ ] Webcam and microphone acces
+- [ ] Account's
 
 ## Design patterns and Best Practices
 __Code standards are important__ when working on any project; your code stays *consistent* and is *readable* for everyone. I defined code standards for __HTML__, __CSS__ and __JS__ while working on this project.
