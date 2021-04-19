@@ -17,6 +17,36 @@ For this application I used The Deck of Cards API. The API is very well document
 
 The link used to fetch the api is https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1, deck_count means how many card decks are being shuffled. The default is one.
 
+```json
+{
+    "success": true,
+    "deck_id": "d5x0uw65g416",
+    "remaining": "42",
+    "piles": {
+        "player1": {
+            "remaining": "3"
+        },
+        "player2": {
+            "cards": [
+                {
+                    "image": "https://deckofcardsapi.com/static/img/KH.png",
+                    "value": "KING",
+                    "suit": "HEARTS",
+                    "code": "KH"
+                },
+                {
+                    "image": "https://deckofcardsapi.com/static/img/8C.png",
+                    "value": "8",
+                    "suit": "CLUBS",
+                    "code": "8C"
+                }
+            ],
+            "remaining": "2"
+        }
+    },
+}
+```
+
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
