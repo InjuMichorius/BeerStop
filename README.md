@@ -5,15 +5,18 @@ BeerStop is a school project I made where friends can play a (Dutch) drinking ga
 [Click here for the live demo](https://beerstop.herokuapp.com/)
 
 ## Goal
-The goal of BeerStop is to provide groups of friends a joyfull experience during quarataine. It's a Dutch drinking game called "bussen", where people play a few rounds of lucky guesses to obtain 4 cards. When every player has 4 cards, the real game begins and players can lay their cards on the christmas tree!
+The goal of BeerStop is to provide groups of friends a joyfull experience during quarataine. It's a Dutch drinking game called "bussen", where people play a few rounds of lucky guesses to obtain 4 cards. When every player has 4 cards, the real game begins and players can lay their cards on the so called "christmas tree"!
 
 For a full explanation on the game, visit the rules here [work in progress](https://github.com/InjuMichorius/BeerStop/wiki/Wireflow)
 
 ## Dataflow
 Explanation and visual representation of data flow, coming soon.
 
-## SWAPI API
-Explanation and visual representation of the used api, coming soon.
+## Deck of Cards API
+The API is well documented on https://deckofcardsapi.com/
+
+The link used to fetch the api is https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1, deck_count means how many card decks are being shuffled. The default is one.
+
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
